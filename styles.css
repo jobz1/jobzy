@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #4a00e0;
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    font-family: 'Roboto', sans-serif;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.page-title {
+    font-size: 2em;
+    color: #fff; /* تغيير لون النص */
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* إضافة ظل للنص */
+}
+
+.job-count {
+    background-color: rgba(255, 255, 255, 0.2); /* خلفية شفافة */
+    border: 2px solid #fff; /* لون الحواف */
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    color: #fff; /* لون النص */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    width: 410px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s; /* تأثير التحول */
+    position: relative; /* ضروري لبعض التأثيرات */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* رفع الكارت عند التحويم */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* زيادة الظل */
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+}
+
+.company-logo {
+    width: 40px; /* تعديل حجم الشعار */
+    height: 40px;
+    border-radius: 50%; /* جعل الشعار دائري */
+    margin-right: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+}
+
+.company-name {
+    font-weight: bold;
+    color: #ea4335;
+    font-size: 1.1em;
+}
+
+.verified-icon {
+    color: #34a853;
+    margin-left: 5px;
+    font-size: 1.1em;
+}
+
+.post-date {
+    font-size: 0.9em;
+    color: #888;
+}
+
+.bookmark-icon {
+    color: #f44336;
+    cursor: pointer;
+    font-size: 1.5em; /* حجم أكبر قليلاً */
+}
+
+.job-title {
+    font-size: 1.7em; /* زيادة حجم العنوان */
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #333; /* لون أغمق */
+}
+
+.location {
+    font-size: 1em; /* تعديل الحجم */
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 8px 12px; /* مساحة أكبر */
+    border-radius: 20px; /* زوايا مدورة أكبر */
+    font-size: 0.85em;
+	font-weight: 500;
+    display: flex;
+    align-items: center;
+	text-align: center;
+    gap: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+}
+
+.tag i {
+    font-size: 1em;
+}
+
+.badges {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.badge {
+    padding: 5px 12px;
+    border-radius: 20px; /* زوايا مدورة */
+    font-size: 0.85em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.featured {
+    background-color: #baf6cf;
+    color: #333;
+	font-weight: 500;
+}
+
+.urgent {
+    background-color: #fde68a;
+    color: #333;
+	font-weight: 500;
+}
+
+.job-description {
+    font-size: 0.95em; /* تعديل الحجم */
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5; /* زيادة التباعد بين الأسطر */
+	font-weight: 500;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.apply-btn {
+    background-color: #2962ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95em; /* تعديل الحجم */
+	font-weight: 600;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: background-color 0.3s; /* تأثير التغيير */
+}
+
+.apply-btn:hover {
+    background-color: #0039cb; /* تغيير اللون عند التحويم */
+}
+
+.apply-btn i {
+    font-size: 1.2em; /* حجم الأيقونة */
+    color: #ffc107;
+}
+
+.details-btn {
+    background-color: #f1f1f1;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+	font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s; /* تأثير التغيير */
+}
+
+.details-btn:hover {
+    background-color: #e0e0e0; /* تغيير اللون عند التحويم */
+}
+
+.capacity-container {
+	width: 320px;
+	padding: 20px;
+	text-align: center;
+	background-color: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+	color: #333;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+.progress-bar {
+	width: 100%;
+	background-color: #e6e6e6;
+	border-radius: 20px;
+	overflow: hidden;
+	margin-bottom: 15px;
+	margin-top: 20px;
+}
+
+.progress {
+	height: 12px;
+	width: 0%; /* القيمة تبدأ من 0 وستتغير تلقائيًا */
+	background-color: #ff0000;
+	transition: width 0.4s ease;
+	border-radius: 20px 0 0 20px;
+}
+
+.progress-text {
+	font-size: 14px;
+	color: #333;
+    text-align: center;
+    font-weight: 600;
+	margin-bottom: 15px;
+}
+
+.capacity-text {
+	color: #888;
+}
+
+
+@media (max-width: 768px) {
+    .card {
+        width: 350px; /* عرض الكارت على الأجهزة المحمولة */
+        flex: 1 1 100%; /* كارت واحد في السطر على الأجهزة المحمولة */
+    }
+}
